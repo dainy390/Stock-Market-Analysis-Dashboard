@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <h1 id="heading" >Stock Market Analysis</h1>
+
+    <!-- Grid :: start -->
+    <div id="grid">
+        <!-- Chart Section :: start -->
+        <section>
+            <div id="chart-container">
+                <p style="margin-left:50px;font-weight:600" class="light" >Peak Value: <span id="peak-val"  class="success"></span></p>
+                <p style="margin-left:50px;font-weight:600;" class="light">Lowest Value: <span id="low-val" class="danger"></span></p>
+                <canvas id="graph" width="600" height="400"></canvas>
+                <div>
+                    <button class="span-btn active-btn" data-type="1mo">1 month</button>
+                    <button class="span-btn" data-type="3mo">3 months</button>
+                    <button class="span-btn" data-type="1y">1 Year</button>
+                    <button class="span-btn" data-type="5y">5 Years</button>
+                </div>
+            </div>
+            <div>
+                <div id="desc-container">
+                    <h2 id="company-name" class="light"></h2>
+                    <h2 id="company-profit"></h2>
+                    <h2 id="company-book-value" class="light"></h2>
+                </div>
+                <div id="summary-container">
+                    <p class="light" id="summary"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chart Section :: end -->
+
+        <!-- List Section :: start -->
+        <section id="loader-container">
+            <span class="loader" ></span>
+            <p sclass="light">Fetching Stock Data...</p>
+        </section>
+        <section id="profit-container" style="display: none;"></section>
+        <!-- List Section :: end -->
+
+
+    </div>
+    <!-- Grid :: end -->
+
+
+
+    <!-- Script -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
